@@ -42,6 +42,12 @@ def handle_user_input():
             elif event.key == pygame.K_SPACE:
                 Observer.accelerate()
 
+            elif event.key == pygame.K_UP:
+                CONST.THRUST_FORCE *= 2
+
+            elif event.key == pygame.K_DOWN:
+                CONST.THRUST_FORCE /= 2
+
         elif event.type == pygame.MOUSEWHEEL:
             if event.y > 0:
                 CONST.PIXELS_PER_METER *= 2

@@ -24,5 +24,14 @@ class Vector():
     def tuple(self) -> tuple:
         return self.x, self.y
 
+    def dist_to(self, other) -> float:
+        return abs(other - self)
+
+    def __format__(self, __format_spec: str) -> str:
+        if __format_spec == ",":
+            return f"({self.x:,}, {self.y:,})"
+        else:
+            raise TypeError
+
     def __repr__(self) -> str:
         return f"({self.x}, {self.y})"

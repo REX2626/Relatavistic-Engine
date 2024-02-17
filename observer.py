@@ -2,7 +2,7 @@ import constants as CONST
 from vector import Vector
 class Observer():
     _mass = 100  # Mass not including potential energy
-    energy = 100_000
+    energy = 10**20
 
     @classmethod
     @property
@@ -13,15 +13,18 @@ class Observer():
     def accelerate(cls) -> None:
         # Using F = ma
         # a = F / m
-        force = Vector(0, 1_000)
+        # NOTE: this is non-relatavistic
+        force = Vector(0, CONST.THRUST_FORCE)
         acceleration = force / cls.mass
 
         # v = u + at
         velocity = acceleration * CONST.SECONDS_PER_TICK
 
         for object in CONST.OBJECTS:
-            # v = u + at
-            object.velocity += velocity
+            # v = gamma*v0
+            # need to multiply by gamma factor to take relatavistic effects into account
+            gamma = 1 / (1 - (abs(object.velocity)/CONST.SPEED_OF_LIGHT)**2)**0.5
+            object.velocity += velocity * gamma
 
         # When accelerating, the observer loses energy and mass
         # Energy lost = 1/2 mv^2
