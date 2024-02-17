@@ -1,1 +1,24 @@
 # Relatavistic-Engine
+
+## Units
+- Mass is measured in kg
+- Length is measured in m
+- Time is measured in s
+
+## Universal constants
+- Speed of light (causality) = 299,792,458 ms<sup>-1</sup>
+- Gravitational constant ≈ 0.000000000066743 m<sup>3</sup>kg<sup>-1</sup>s<sup>-2</sup>
+
+## Current Features
+- Player ship
+
+## Future Features
+- Stats
+- Mass of objects
+- Gravity between objects
+- Relativistic effects
+
+### Notes
+- First get Newtonian physics
+- Then special relativity
+- Finally investigate general relativity

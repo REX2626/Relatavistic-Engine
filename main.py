@@ -1,6 +1,9 @@
 import pygame
+pygame.init()
+
 import sys
 import constants as CONST
+import stats
 
 pygame.display.set_caption("Relatavistic Engine")
 
@@ -11,7 +14,9 @@ def draw_window():
     for object in CONST.OBJECTS:
         object.draw()
 
-    CONST.WIN.blit(CONST.PLAYER_SHIP, (CONST.WIDTH/2 - CONST.PLAYER_SHIP.get_width()/2, CONST.HEIGHT/2 - CONST.PLAYER_SHIP.get_height()/2))
+    stats.draw_stats()
+
+    CONST.WIN.blit(CONST.OBSERVER_IMAGE, (CONST.WIDTH/2 - CONST.OBSERVER_IMAGE.get_width()/2, CONST.HEIGHT/2 - CONST.OBSERVER_IMAGE.get_height()/2))
 
     pygame.display.update()
 
