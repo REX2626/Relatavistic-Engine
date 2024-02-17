@@ -3,6 +3,7 @@ pygame.init()
 
 import sys
 import constants as CONST
+from vector import Vector
 import stats
 
 pygame.display.set_caption("Relatavistic Engine")
@@ -16,7 +17,7 @@ def draw_window():
 
     stats.draw_stats()
 
-    CONST.WIN.blit(CONST.OBSERVER_IMAGE, (CONST.WIDTH/2 - CONST.OBSERVER_IMAGE.get_width()/2, CONST.HEIGHT/2 - CONST.OBSERVER_IMAGE.get_height()/2))
+    CONST.WIN.blit(CONST.OBSERVER_IMAGE, (CONST.MIDPOINT() - Vector(*CONST.OBSERVER_IMAGE.get_size())/2).tuple())
 
     pygame.display.update()
 

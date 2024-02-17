@@ -9,6 +9,11 @@
 - Speed of light (causality) = 299,792,458 ms<sup>-1</sup>
 - Gravitational constant ≈ 0.000000000066743 m<sup>3</sup>kg<sup>-1</sup>s<sup>-2</sup>
 
+## Coordinate system
+- (0, 0) is the position of the observer
+- Positive x is to the right of the observer
+- Positive y is downwards from the observer
+
 ## Current Features
 - Player ship
 
