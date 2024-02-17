@@ -19,4 +19,4 @@ class Object():
     def draw(self) -> None:
         # Radius is proportional to the square root of mass
         radius = self.mass**0.5
-        pygame.draw.circle(CONST.WIN, CONST.GREY, (self.position + CONST.MIDPOINT()).tuple(), radius)
+        pygame.draw.circle(CONST.WIN, CONST.GREY, (self.position*CONST.PIXELS_PER_METER + CONST.MIDPOINT()).tuple(), radius)

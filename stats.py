@@ -19,6 +19,7 @@ class Stat():
 
 stats = [
     Stat("Tick Rate", lambda: CONST.TICK_RATE),
+    Stat("Meters per Pixel", lambda: 1 / CONST.PIXELS_PER_METER),
     Stat("Mass", lambda: Observer.mass),
     Stat("Potential Energy", lambda: Observer.energy)
 ]

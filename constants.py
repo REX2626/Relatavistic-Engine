@@ -16,6 +16,7 @@ SECONDS_PER_TICK = 1 / TICK_RATE
 SPEED_OF_LIGHT = 299_792_458
 
 WIN = pygame.display.set_mode((WIDTH, HEIGHT), flags=pygame.RESIZABLE)
+PIXELS_PER_METER = 1
 
 def MIDPOINT():
     return Vector(*pygame.display.get_window_size())/2
