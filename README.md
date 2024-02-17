@@ -4,6 +4,7 @@
 - Mass is measured in kg
 - Length is measured in m
 - Time is measured in s
+- Force is measured in N
 - Energy is measured in J
 
 ## Universal constants
