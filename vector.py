@@ -18,6 +18,9 @@ class Vector():
     def __truediv__(self, divisor: float) -> Vector:
         return Vector(self.x / divisor, self.y / divisor)
 
+    def __abs__(self) -> float:
+        return (self.x**2 + self.y**2) ** 0.5
+
     def tuple(self) -> tuple:
         return self.x, self.y
 

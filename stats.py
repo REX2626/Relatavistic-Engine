@@ -13,7 +13,7 @@ class Stat():
         self.get_value = get_value
 
     def draw(self, position: tuple[int, int]) -> int:
-        label = font.render(f"{self.text}: {self.get_value()}", True, CONST.WHITE)
+        label = font.render(f"{self.text}: {self.get_value():,}", True, CONST.WHITE)
         CONST.WIN.blit(label, position)
         return label.get_height()
 

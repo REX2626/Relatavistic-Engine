@@ -13,6 +13,8 @@ SHOW_STATS = True
 TICK_RATE = 10
 SECONDS_PER_TICK = 1 / TICK_RATE
 
+SPEED_OF_LIGHT = 299_792_458
+
 WIN = pygame.display.set_mode((WIDTH, HEIGHT), flags=pygame.RESIZABLE)
 
 def MIDPOINT():
