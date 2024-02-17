@@ -18,7 +18,9 @@ class Stat():
         return label.get_height()
 
 stats = [
-    Stat("Mass", lambda: Observer.mass)
+    Stat("Tick Rate", lambda: CONST.TICK_RATE),
+    Stat("Mass", lambda: Observer.mass),
+    Stat("Potential Energy", lambda: Observer.energy)
 ]
 
 def draw_stats() -> None:

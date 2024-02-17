@@ -1,6 +1,6 @@
 import pygame
-from objects import Object
 from vector import Vector
+from universe import OBJECTS  # used by other files
 
 WIDTH = 800
 HEIGHT = 600
@@ -9,9 +9,9 @@ BLACK = pygame.color.Color(0, 0, 0)
 GREY = pygame.color.Color(100, 100, 100)
 WHITE = pygame.color.Color(255, 255, 255)
 
-OBJECTS: list[Object] = [Object(10, Vector(100, 100), Vector(0, 0))]
-
 SHOW_STATS = True
+TICK_RATE = 10
+SECONDS_PER_TICK = 1 / TICK_RATE
 
 WIN = pygame.display.set_mode((WIDTH, HEIGHT), flags=pygame.RESIZABLE)
 

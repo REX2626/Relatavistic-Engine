@@ -4,6 +4,7 @@
 - Mass is measured in kg
 - Length is measured in m
 - Time is measured in s
+- Energy is measured in J
 
 ## Universal constants
 - Speed of light (causality) = 299,792,458 ms<sup>-1</sup>
@@ -14,11 +15,15 @@
 - Positive x is to the right of the observer
 - Positive y is downwards from the observer
 
+## Universe.txt
+- This is where the initial objects are set
+
 ## Current Features
 - Player ship
+- Stats
 
 ## Future Features
-- Stats
+- Mass includes energy
 - Mass of objects
 - Gravity between objects
 - Relativistic effects

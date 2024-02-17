@@ -9,5 +9,11 @@ class Object():
         self.position = position
         self.velocity = velocity
 
+    def update(self) -> None:
+        # As the time per tick is small, we assume a == 0
+        # S = ut + 1/2 at^2 can be approximated to:
+        # S = ut
+        self.position += self.velocity * CONST.SECONDS_PER_TICK
+
     def draw(self) -> None:
         pygame.draw.circle(CONST.WIN, CONST.GREY, (self.position + CONST.MIDPOINT()).tuple(), 10)

@@ -12,6 +12,9 @@ class Vector():
     def __sub__(self, other: Vector) -> Vector:
         return Vector(self.x - other.x, self.y - other.y)
 
+    def __mul__(self, multiplier: float) -> Vector:
+        return Vector(self.x * multiplier, self.y * multiplier)
+
     def __truediv__(self, divisor: float) -> Vector:
         return Vector(self.x / divisor, self.y / divisor)
 

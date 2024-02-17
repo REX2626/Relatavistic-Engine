@@ -2,6 +2,7 @@ import pygame
 pygame.init()
 
 import sys
+from time import perf_counter
 import constants as CONST
 from vector import Vector
 import stats
@@ -22,6 +23,11 @@ def draw_window():
     pygame.display.update()
 
 
+def update_objects():
+    for object in CONST.OBJECTS:
+        object.update()
+
+
 def handle_user_input():
     pass
 
@@ -34,8 +40,10 @@ def quit():
 
 def main():
     while True:
+        start_time = perf_counter()
 
         handle_user_input()
+        update_objects()
         draw_window()
 
         for event in pygame.event.get():
@@ -45,6 +53,10 @@ def main():
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_F3:
                     CONST.SHOW_STATS = not CONST.SHOW_STATS
+
+        # Wait for tick to finish
+        while perf_counter() < start_time + CONST.SECONDS_PER_TICK:
+            pass
 
 
 if __name__ == "__main__":
